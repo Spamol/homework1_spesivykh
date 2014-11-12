@@ -45,6 +45,7 @@ jQuery( document ).ready(function( $ ) {
 	    success:    function(responseText,statusText,xhr,jquery) { 
     		if(responseText == 'Сообщение отправлено, спасибо!'){
 	      		$("#respServer").addClass('green');
+                $("input.valid").add("textarea.valid").val('');
 	    	}  
 	      $("#respServer").fadeIn();
 	    } 
