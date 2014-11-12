@@ -1,0 +1,14 @@
+[12-Nov-2014 00:54:05 Europe/Moscow] PHP Notice:  Undefined index: PHPSESSID in /home/bh12571/public_html/spesivykh/index.php on line 6
+[12-Nov-2014 10:13:56 Europe/Moscow] PHP Notice:  Undefined index: PHPSESSID in /home/bh12571/public_html/spesivykh/index.php on line 6
+[12-Nov-2014 10:18:29 Europe/Moscow] PHP Notice:  A session had already been started - ignoring session_start() in /home/bh12571/public_html/spesivykh/header.php on line 4
+[12-Nov-2014 10:18:29 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/bh12571/public_html/spesivykh/header.php:4) in /home/bh12571/public_html/spesivykh/kcaptcha/kcaptcha.php on line 216
+[12-Nov-2014 10:18:29 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/bh12571/public_html/spesivykh/header.php:4) in /home/bh12571/public_html/spesivykh/kcaptcha/kcaptcha.php on line 217
+[12-Nov-2014 10:18:29 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/bh12571/public_html/spesivykh/header.php:4) in /home/bh12571/public_html/spesivykh/kcaptcha/kcaptcha.php on line 218
+[12-Nov-2014 10:18:29 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/bh12571/public_html/spesivykh/header.php:4) in /home/bh12571/public_html/spesivykh/kcaptcha/kcaptcha.php on line 219
+[12-Nov-2014 10:18:29 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/bh12571/public_html/spesivykh/header.php:4) in /home/bh12571/public_html/spesivykh/kcaptcha/kcaptcha.php on line 221
+[12-Nov-2014 13:23:00 Europe/Moscow] PHP Parse error:  syntax error, unexpected T_BOOLEAN_AND, expecting ',' or ')' in /home/bh12571/public_html/spesivykh/contacts.php on line 36
+[12-Nov-2014 13:23:11 Europe/Moscow] PHP Parse error:  syntax error, unexpected T_BOOLEAN_AND, expecting ',' or ')' in /home/bh12571/public_html/spesivykh/contacts.php on line 36
+[12-Nov-2014 13:23:13 Europe/Moscow] PHP Parse error:  syntax error, unexpected T_BOOLEAN_AND, expecting ',' or ')' in /home/bh12571/public_html/spesivykh/contacts.php on line 36
+[12-Nov-2014 13:33:24 Europe/Moscow] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/bh12571/public_html/spesivykh/feedback.php on line 66
+[12-Nov-2014 14:06:51 Europe/Moscow] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/bh12571/public_html/spesivykh/feedback.php on line 39
+[12-Nov-2014 14:14:55 Europe/Moscow] PHP Parse error:  syntax error, unexpected '*' in /home/bh12571/public_html/spesivykh/feedback.php on line 59

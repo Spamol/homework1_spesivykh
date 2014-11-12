@@ -1,0 +1,315 @@
+/* Created Spamol */
+// Variables
+@img-link: "../img";
+@blueColor: #3ba8c0;
+// Mixins
+.twoFloatBlocks(@width){
+	float:left;
+	width: @width;
+}
+// ПЛАНШЕТЫ
+@media only screen
+and (min-width : 768px) 
+and (max-width : 1024px) {
+	.mainPage{
+		margin-bottom: 140px;
+	}
+	header{
+		.wrapBig{
+			min-width: 768px;
+			width: 100%;
+			max-width: 1024px;
+			.logo{
+				.twoFloatBlocks(39%);
+			}
+			.socialButton{
+				.twoFloatBlocks(59%);
+				ul{
+					margin-right: 120px;
+				}
+			}
+		}
+	}
+	.wrapSmall{
+		width: 100%;
+		max-width: 1024px;
+		ul.mainMenu{
+			display: none;
+		 	position: absolute;
+		 	top: 92px;
+		 	right:0;
+		 	box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+		 	overflow: visible;
+		 	&:before{
+		 		content: '';
+		 		display: block;
+		 		background: url("@{img-link}/strMenu.jpg") no-repeat 0 0;
+		 		position: absolute;
+		 		z-index: 1000;
+		 		width: 30px;
+		 		height: 15px;
+		 		top:-15px;
+		 		right: 40px;
+		 	}
+		}
+		.contacts{
+			position:absolute;
+			bottom:82px;
+			width: 100%;
+			border-radius: 0;
+			div{
+				float: left;
+				padding: 14px 0;
+				width: 33.3333333333%;
+				text-align: center;
+				&.titleCont{display: none}
+				&.emailCont{
+					background-position: 13% 8px;
+					padding-left: 0;
+					background-color: #41b9d4;
+				}
+				&.telCont{
+					background-position: 16% -31px;
+					padding-left: 0;
+					background-color: #48cbe8;
+				}
+				&.skypeCont{
+					background-position: 20% -71px;
+					padding-left: 0;
+					background-color: #51daf8;
+				}
+			}
+ 		}	 
+	}
+	.mainContent{
+		width: 700px;
+		float: none;
+		margin: 0 auto;
+	}
+	.openMobileMenu{
+		background: url("@{img-link}/mobileMenu.jpg") no-repeat 0 0;
+		height: 22px;
+		width: 28px;
+		position: absolute;
+		right: 40px;
+		top:48px;
+		cursor: pointer;
+	}
+	.projects{
+		padding: 33px 63px 0;
+		.project{
+			width: 230px;
+			height: 235px;
+			margin:0 25px 35px;
+			.picProject{
+				width: 225px;
+				height: 158px;
+				.nameProject{
+					width: 205px;
+					height: 158px;
+					div{
+						width: 205px;
+					}
+				}
+				&.addProject{
+					a{
+						background: url("@{img-link}/addProject.jpg") no-repeat center 55px;
+						padding-top: 98px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// МОБИЛКИ
+@media only screen
+and (min-width : 320px) 
+and (max-width : 767px) {
+	html{
+		-webkit-text-size-adjust: none;
+	}
+	.mainPage{
+		margin-bottom: 303px;
+		.socialButtonMobi{
+			display: block;
+			position: absolute;
+			bottom: 90px;
+			width: 100%;
+			ul{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style-type: none;
+				float: left;
+				width: 25%;
+				a{
+					display: block;
+					width: 45px;
+					height: 45px;
+					margin: 0 auto;
+					border-radius: 22px;
+					background: @blueColor;
+					span{
+						font-size: 0px;
+						display: block;
+						height: 45px;
+						background: url("@{img-link}/socialSprite.png") no-repeat;
+						&.vk{
+							background-position: 7px 15px;
+						}
+						&.tw{
+							background-position: 11px -21px;
+						}
+						&.fb{
+							background-position: 14px -65px;
+						}
+						&.git{
+							background-position: 10px -111px;
+						}
+					}
+				}
+			}
+		}
+	}
+	header{
+		.wrapBig{
+			min-width: 320px;
+			width: 100%;
+			max-width: 767px;
+			.logo{
+				.twoFloatBlocks(39%);
+				padding: 13px 0;
+				a{
+					img{
+						width: 140px;
+					}
+				}
+			}
+			.socialButton{
+				display: none;
+			}
+		}
+	}
+	.wrapSmall{
+		width: 100%;
+		max-width: 767px;
+		ul.mainMenu{
+			display: none;
+		 	position: absolute;
+		 	top: 60px;
+		 	left:0;
+		 	box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+		 	width: 100%;
+		 	border-radius: 0;
+		 	li{
+		 		border-bottom: 1px solid #8096ad;
+		 		a{
+		 			padding: 8px 0;
+		 			text-align: center;
+		 			border: none;
+		 			&:hover{
+		 			border: none;
+		 		}
+		 		}
+		 	}
+		}
+		.contacts{
+			position:absolute;
+			bottom:160px;
+			width: 100%;
+			border-radius: 0;
+			div{
+				padding: 10px 0;
+				text-align: center;
+				&.titleCont{display: none}
+				&.emailCont{
+					background-position: 25% 4px;
+					padding-left: 0;
+					background-color: #41b9d4;
+				}
+				&.telCont{
+					background-position: 25% -37px;
+					padding-left: 0;
+					background-color: #48cbe8;
+				}
+				&.skypeCont{
+					background-position: 25% -76px;
+					padding-left: 0;
+					background-color: #51daf8;
+				}
+			}
+ 		}	
+	}
+	.openMobileMenu{
+		background: url("@{img-link}/mobileMenu.jpg") no-repeat 0 0;
+		height: 22px;
+		width: 28px;
+		position: absolute;
+		right: 18px;
+		top:19px;
+		cursor: pointer;
+	}
+	.mainContent{
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+		section{
+			h1{
+				text-align: center;
+				span{
+					padding: 0;
+					border: 0;
+					font-size: 90%;
+				}
+			}
+			.aboutMe{
+				text-align: center;
+				padding: 0;
+				.aboutMeAvatar{
+					float: none;
+					margin:0 auto 20px;
+					width: 142px;
+					div{
+						width: 132px;
+						height: 132px;
+						border-radius: 71px;
+						img{
+							border-radius: 68px;
+							height: 132px;
+						}
+					}
+				}
+				.aboutMeInfo{
+					margin: 0 auto;
+					float: none;
+					div{
+						line-height: 20px;
+						span{
+							display: block;
+						}
+						p.skills{
+							float: none;
+							margin: 0 auto;
+						}
+					}
+				}
+			}
+			.works{
+				padding:0 25px;
+				.work,
+				.learn,
+				.course{
+					text-align: center;
+					background-position: top center;
+					padding-top: 45px;
+					h2,
+					p{
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+}
