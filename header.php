@@ -41,10 +41,10 @@
                     <div class="logo"><a href="/"><img src="img/logo.jpg" alt="toMainPage"></a></div>
                     <div class="socialButton">
                         <ul>
-                            <li><a href="#"><span class="vk">vk</span></a></li>
-                            <li><a href="#"><span class="tw">tw</span></a></li>
-                            <li><a href="#"><span class="fb">fb</span></a></li>
-                            <li><a href="#"><span class="git">git</span></a></li>
+                            <li><a href="http://vk.com/spamol" target="_blank"><span class="vk">vk</span></a></li>
+                            <li><a href="/"><span class="tw">tw</span></a></li>
+                            <li><a href="/"><span class="fb">fb</span></a></li>
+                            <li><a href="https://github.com/Spamol/" target="_blank"><span class="git">git</span></a></li>
                         </ul>
                     </div>
                 </div>

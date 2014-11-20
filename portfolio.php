@@ -1,62 +1,38 @@
-<?php include "header.php"; ?>
+<?php 
+    session_start();
+    include "header.php"; ?>
+<?php include "config.php"; ?>
             <div class="wrapSmall">
                 <div class="mainContent">
                     <section>
                         <h1><span>Мои работы</span></h1>
                         <div class="projects">
+                            <?php
+                            $pdo = connectToDB();
+                            $res = getDataAsArray($pdo, $data_sql['getWorks']);
+                            foreach ($res as $item):
+                            ?>
                             <div class="project">
                                 <div class="picProject">
-                                    <a href="#"><img src="img/work1.jpg" alt="0"></a>
-                                    <div class="nameProject">
+                                    <img src="<?php echo $item['img'] ?>" alt="<?php echo $item['title'] ?>">
+                                    <a href="<?php echo $item['url'] ?>" class="nameProject">
                                         <div>
-                                            <a href="#">Название очень длинное самое</a>
+                                            <span><?php echo $item['title'] ?></span>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                                <div class="linkProject"><a href="#">www.site.ru</a></div>
-                                <div class="deskProject">Информация о проекте 1 превью 2 строки стороки строки</div>
+                                <div class="linkProject"><a href="<?php echo $item['url'] ?>"><?php echo $item['url'] ?></a></div>
+                                <div class="deskProject"><?php echo $item['description'] ?></div>
                             </div>
-                            <div class="project">
-                                <div class="picProject">
-                                    <a href="#"><img src="img/work2.jpg" alt="0"></a>
-                                    <div class="nameProject">
-                                        <div>
-                                            <a href="#">Название</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="linkProject"><a href="#">www.site.ru</a></div>
-                                <div class="deskProject">Информация о проекте 2</div>
-                            </div>
-                            <div class="project">
-                                <div class="picProject">
-                                    <a href="#"><img src="img/work3.jpg" alt="0"></a>
-                                    <div class="nameProject">
-                                        <div>
-                                            <a href="#">Название</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="linkProject"><a href="#">www.site.ru</a></div>
-                                <div class="deskProject">Информация о проекте 3 превью 2 строки</div>
-                            </div>
-                            <div class="project">
-                                <div class="picProject">
-                                    <a href="#"><img src="img/work4.jpg" alt="0"></a>
-                                    <div class="nameProject">
-                                        <div>
-                                            <a href="#">Название</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="linkProject"><a href="#">www.site.ru</a></div>
-                                <div class="deskProject">Информация о проекте 4 превью 2 строки</div>
-                            </div>
+
+                            <?php endforeach;
+                            if(isset($_SESSION["is_auth"])){ ?>
                             <div class="project">
                                 <div class="picProject addProject">
-                                    <a href="#">Добавить проект</a>
+                                    <a href="#" id="openPopup">Добавить проект</a>
                                 </div>
                             </div>
+                            <?php } ?>
                         </div>
                     </section>
                 </div>

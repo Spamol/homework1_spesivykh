@@ -5,9 +5,9 @@
         </ul>
         <div class="contacts">
             <div class="titleCont">Контакты</div>
-            <div class="emailCont">spamol@ya.ru</div>
-            <div class="telCont">+79165550055</div>
-            <div class="skypeCont">spamol2</div>
+            <div class="emailCont"><a href="mailto:spamol@ya.ru">spamol@ya.ru</a></div>
+            <div class="telCont"><a href="tel:+79165550055">+79165550055</a></div>
+            <div class="skypeCont"><a href="skype:spamol2">spamol2</a></div>
         </div>
     </div>
     <div class="socialButtonMobi">
