@@ -1,8 +1,9 @@
 <?php
+header("Content-type: text/html; charset=UTF-8");
 session_start();
 	// e-mail получателя
 
-	$emailAddress = 'spamol@ya.ru';
+	$emailAddress = 'pozzitiff-91@mail.ru';
 
 
 
@@ -28,7 +29,7 @@ session_start();
 
 		echo "Заполнены не все поля!";         
 
-	} elseif(!preg_match("/^[0-9a-z_\.\-]+@[0-9a-z_\.\-]+\.[a-z]{2,6}$/i", $email)) {
+	} elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 		echo "Неправильно введён e-mail";
 
