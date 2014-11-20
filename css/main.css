@@ -883,3 +883,9 @@ footer .gradient {
 	-ms-transform: rotate(90deg);
 	transform: rotate(90deg);
 }
+.answerServ{
+    display: none;
+    margin-top: 5px;
+    color: #f97e76;
+    font-size: 14px;
+}

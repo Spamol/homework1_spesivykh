@@ -19,17 +19,17 @@
 <div class="popupLayout" id="openPopupAddWork">
     <div class="popupAddWork">
         <div class="popupHead">Добавление проекта</div>
-        <form action="upload.php" method="POST" id="formaAddWork">
+        <form action="upload.php" method="POST" id="formaAddWork" enctype="multipart/form-data">
             <div class="inputWrap">
                 <p><label for="titleWork">Название проекта</label></p>
                 <p><input type="text" name="titleWork" id="titleWork" placeholder="Введите название"></p>
             </div>
-            <div class="inputWrap">
-                <p><label for="picWork">Картинка проекта</label></p>
+            <div class="inputWrap picWork">
+                <p><label for="files">Картинка проекта</label></p>
                 <div class="fileform">
                     <div id="fileformlabel">Загрузите изображение</div>
                     <div class="selectbutton"></div>
-                    <input id="upload" type="file" name="upload" onchange="getName(this.value);" />
+                    <input id="upload" type="file" name="files" onchange="getName(this.value);" />
                 </div>
             </div>
             <div class="inputWrap">
@@ -42,6 +42,7 @@
             </div>
             <div class="wrapSubmit">
                 <input type="submit" value="Добавить" class="submitAddWork">
+                <p class="answerServ">Ошибка</p>
             </div>
         </form>
         <div id="closePopup"></div>

@@ -56,7 +56,23 @@ jQuery( document ).ready(function( $ ) {
             }  
 	    } 
 	}; 
+    var options2 = { 
+        target:     '.answerServ',
+        url:        'upload.php',
+        success:    function(responseText,statusText,xhr,jquery) { 
+            if(responseText == 'OK'){
+                $("label.error").hide();
+                $("input.valid").add("textarea.valid").val('');
+                $(".popupLayout").fadeOut();
+                location.reload(true);
+            } 
+            if(responseText == 'Файл слишком большой или не является изображением(gif,jpg,png)'){
+                $(".picWork").append("<label class='error'>Некорректная картинка</label>");
+            }
+        } 
+    };
     $('#formFeedback').ajaxForm(options);
+    $('#formaAddWork').ajaxForm(options2);
     //валидация формы на клиенте
     $("#formFeedback").validate({
        rules:{
@@ -130,6 +146,7 @@ jQuery( document ).ready(function( $ ) {
 
     $('#openPopup').click(function(){
         $('.popupLayout').fadeIn();
+        return false;
     });
     $('#closePopup').click(function(){
         $('.popupAddWork label.error').fadeOut();
