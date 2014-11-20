@@ -7,6 +7,7 @@
                     <section>
                         <h1 class="blueTitle">У вас интересный проект? Напишите мне</h1>
                         <form action="feedback.php" method="post" class="feedback" id="formFeedback">
+                            <label id="respServer"></label>
                             <div class="wrapInputs">
                                 <div class="nameFeedback blockFloat wrapInput">
                                     <label for="name">Имя</label>
@@ -24,14 +25,13 @@
                             <div class="captcha">
                                 <label for="keystring">Введите код указанный на картинке</label>
                                 <div class="captchaCode blockFloat"><img src="./kcaptcha/?<?php echo session_name()?>=<?php echo session_id()?>"></div>
-                                <div class="blockFloat captchaInput">
+                                <div class="blockFloat captchaInput wrapInput">
                                     <input type="text" name="keystring" placeholder="Введите код">
                                 </div>
                             </div>
                             <div class="wrapInput">
                                 <input type="submit" class="submitFeedback" value="Отправить">
                                 <input type="reset" class="clearFeedback" value="Очистить">
-                                <label id="respServer"></label>
                             </div>
                         </form>
                     </section>

@@ -8,7 +8,7 @@ jQuery( document ).ready(function( $ ) {
 			}
 		});
 	}
-	var elem = $(".project").find(".nameProject").children("div").children("a");
+	var elem = $(".project").find(".nameProject").children("div").children("span");
 	cutStr(elem,22);
 	var elem2 = $(".project").find(".deskProject");
 	cutStr(elem2,46);
@@ -44,10 +44,16 @@ jQuery( document ).ready(function( $ ) {
 	    url:        'feedback.php',
 	    success:    function(responseText,statusText,xhr,jquery) { 
     		if(responseText == 'Сообщение отправлено, спасибо!'){
-	      		$("#respServer").addClass('green');
+                $("label.error").hide();
                 $("input.valid").add("textarea.valid").val('');
-	    	}  
-	      $("#respServer").fadeIn();
+                $("#respServer").fadeIn();
+                setTimeout(function(){
+                    $("#respServer").fadeOut();
+                }, 3000);
+	    	} 
+            if(responseText == 'Проверочный код введен неверно!'){
+                $(".captchaInput").append("<label class='error'>Невереный код</label>");
+            }  
 	    } 
 	}; 
     $('#formFeedback').ajaxForm(options);
@@ -65,6 +71,9 @@ jQuery( document ).ready(function( $ ) {
                 required: true,
                 minlength: 5
             },
+            keystring:{
+                required: true
+            }
        },
        messages:{
 
@@ -79,6 +88,50 @@ jQuery( document ).ready(function( $ ) {
                 required: "Заполните сообщение",
                 minlength: "Мин. 5 символов"
             },
+            keystring:{
+                required: "Заполните код"
+            }
        }
+    });
+    $("#formaAddWork").validate({
+       rules:{
+            titleWork:{
+                required: true
+            },
+            picWork:{
+                required: true
+            },
+            urlWork:{
+                required: true
+            },
+            descWork:{
+                required: true
+            }
+       },
+       messages:{
+
+            titleWork:{
+                required: "Заполните название"
+            },
+            picWork:{
+                required: "Загрузите картинку"
+            },
+            urlWork:{
+                required: "Укажите ссылку"
+            },
+            descWork:{
+                required: "Опишите проект"
+            }
+       }
+    });
+    $(".clearFeedback").click(function(){
+        $("label.error").hide();
+    })
+
+    $('#openPopup').click(function(){
+        $('.popupLayout').fadeIn();
+    });
+    $('#closePopup').click(function(){
+        $('.popupLayout').fadeOut();
     });
 });
