@@ -132,6 +132,7 @@ jQuery( document ).ready(function( $ ) {
         $('.popupLayout').fadeIn();
     });
     $('#closePopup').click(function(){
+        $('.popupAddWork label.error').fadeOut();
         $('.popupLayout').fadeOut();
     });
 });
